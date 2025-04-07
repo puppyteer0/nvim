@@ -383,7 +383,7 @@
           # you could also pass something else:
           # see :help nixCats
           themer = true;
-          colorscheme = "onedark";
+          colorscheme = "solarized";
         };
         extra = {
           # to keep the categories table from being filled with non category things that you want to pass
