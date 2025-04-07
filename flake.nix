@@ -158,8 +158,9 @@
         # packageDefinitions of the package this was packaged with.
         # :help nixCats.flake.outputs.categoryDefinitions.scheme
         themer = with pkgs.vimPlugins;
-          (builtins.getAttr (categories.colorscheme or "onedark") {
+          (builtins.getAttr (categories.colorscheme or "solarized") {
               # Theme switcher without creating a new category
+              "solarized" = nvim-solarized-lua;
               "onedark" = onedark-nvim;
               "catppuccin" = catppuccin-nvim;
               "catppuccin-mocha" = catppuccin-nvim;
@@ -351,7 +352,7 @@
           # or, whatever you named the package definition in the packageDefinitions set.
           # WARNING: MAKE SURE THESE DONT CONFLICT WITH OTHER INSTALLED PACKAGES ON YOUR PATH
           # That would result in a failed build, as nixos and home manager modules validate for collisions on your path
-          aliases = [ "vim" "vimcat" ];
+          aliases = [ "v" "vimcat" ];
 
           # explained below in the `regularCats` package's definition
           # OR see :help nixCats.flake.outputs.settings for all of the settings available
