@@ -148,6 +148,8 @@
             vim-repeat
             plenary-nvim
             nvim-notify
+            hydra-nvim
+            smart-splits-nvim
           ];
           extra = [
             oil-nvim
