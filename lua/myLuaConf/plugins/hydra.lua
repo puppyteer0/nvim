@@ -1,9 +1,6 @@
 local Hydra = require('hydra')
 local splits = require('smart-splits')
 
-local cmd require('hydra.keymap-util').cmd
-local pcmd require('hydra.keymap-util').pcmd
-
 local window_hint = [[
  ^^^^^^^^^^^^     Move      ^^    Size   ^^   ^^     Split
  ^^^^^^^^^^^^-------------  ^^-----------^^   ^^---------------
@@ -33,10 +30,10 @@ heads = {
       { 'k', '<C-k>k' },
       { 'l', '<C-w>l' },
       
-      { 'H', cmd 'WinShift left' },
-      { 'J', cmd 'WinShift down' },
-      { 'K', cmd 'WinShift up' },
-      { 'L', cmd 'WinShift right' },
+      { 'H','<C-w>H'},
+      { 'J','<C-w>J'},
+      { 'K','<C-w>K'},
+      { 'L','<C-w>L'},
       
       { '<C-h>', function() splits.resize_left(2)  end },
       { '<C-j>', function() splits.resize_down(2)  end },
